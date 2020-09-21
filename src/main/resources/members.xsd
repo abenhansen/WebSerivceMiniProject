@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.baeldung.com/springsoap/gen"
+           targetNamespace="http://www.baeldung.com/springsoap/gen" elementFormDefault="qualified">
+
+    <xs:element name="getMemberResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="member" type="tns:member"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getMemberRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="email" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+
+    <xs:simpleType name="role">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Manager"/>
+            <xs:enumeration value="Coach"/>
+            <xs:enumeration value="Member"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+
+    <xs:complexType name="member">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="email" type="xs:string"/>
+            <xs:element name="age" type="xs:int"/>
+            <xs:element name="type" type="tns:role"/>
+        </xs:sequence>
+    </xs:complexType>
+
+
+</xs:schema>
