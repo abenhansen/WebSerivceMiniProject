@@ -1,4 +1,4 @@
-package com.baeldung.springsoap.gen;
+package memberclub;
 
 import org.springframework.stereotype.Component;
 
@@ -13,11 +13,14 @@ public class MemberRepository {
 
     @PostConstruct
     public void initData() {
-      Member member = new Member("Svend", "svend@mail.dk", 18, Role.MEMBER);
-      members.put(member.getEmail(), member);
+        Member member = new Member();
+        member.setName("Svend");
+        member.setEmail("svend@mail.dk");
+        member.setAge(18);
+        members.put(member.getEmail(), member);
     }
 
-    public Member findMember(String email){
+    public Member findMember(String email) {
         return members.get(email);
     }
 

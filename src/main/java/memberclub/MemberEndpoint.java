@@ -1,6 +1,6 @@
-package com.baeldung.springsoap.gen;
+package memberclub;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import  org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ws.server.endpoint.annotation.Endpoint;
 import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
 import org.springframework.ws.server.endpoint.annotation.RequestPayload;
@@ -9,7 +9,7 @@ import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 @Endpoint
 public class MemberEndpoint {
 
-    private static final String NAMESPACE_URI = "http://www.baeldung.com/springsoap/gen";
+    private static final String NAMESPACE_URI = "memberClub";
 
     private MemberRepository memberRepository;
 

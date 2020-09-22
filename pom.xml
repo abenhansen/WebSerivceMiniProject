@@ -15,22 +15,22 @@
     <description>Demo project for Spring Boot</description>
 
     <dependencies>
+
+        <dependency>
+            <groupId>org.springframework.ws</groupId>
+            <artifactId>spring-ws-core</artifactId>
+            <version>3.0.10.RELEASE</version>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-rest</artifactId>
-        </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-jdbc</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web-services</artifactId>
@@ -84,7 +84,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <schemaDirectory>${project.basedir}/src/main/resources/</schemaDirectory>
+                    <schemaDirectory>${project.basedir}/src/main/resources</schemaDirectory>
                     <outputDirectory>${project.basedir}/src/main/java</outputDirectory>
                     <clearOutputDir>false</clearOutputDir>
                 </configuration>
